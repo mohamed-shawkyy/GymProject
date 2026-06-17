@@ -5,6 +5,10 @@ VisualStudioVersion = 17.14.37216.2 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym", "Gym.csproj", "{CC4FFA23-A2EE-4C1B-B49D-2CB55D81B7CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym.BLL", "..\Gym.BLL\Gym.BLL.csproj", "{79D328C4-EFF2-4B2A-9EFB-99D697D69F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym.DAL", "..\Gym.DAL\Gym.DAL.csproj", "{B0B8336E-8C3B-405F-B9A7-EF6A04706D0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CC4FFA23-A2EE-4C1B-B49D-2CB55D81B7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4FFA23-A2EE-4C1B-B49D-2CB55D81B7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4FFA23-A2EE-4C1B-B49D-2CB55D81B7CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D328C4-EFF2-4B2A-9EFB-99D697D69F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D328C4-EFF2-4B2A-9EFB-99D697D69F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D328C4-EFF2-4B2A-9EFB-99D697D69F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D328C4-EFF2-4B2A-9EFB-99D697D69F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B8336E-8C3B-405F-B9A7-EF6A04706D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B8336E-8C3B-405F-B9A7-EF6A04706D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B8336E-8C3B-405F-B9A7-EF6A04706D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B8336E-8C3B-405F-B9A7-EF6A04706D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
