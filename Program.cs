@@ -3,6 +3,8 @@ using Gym.DAL.Repositories;
 using Gym.DAL.AppDbContext;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Gym.BLL.Contacts;
+using Gym.BLL.Services;
 namespace Gym
 {
     public class Program
@@ -16,6 +18,7 @@ namespace Gym
             
             //builder.Services.AddScoped<IPlanRepository,PlanRepository>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped<IMemberService, MemberService>();
 
             builder.Services.AddDbContext<GymDbContext>(options =>
             {  
