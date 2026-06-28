@@ -5,6 +5,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Gym.BLL.Contacts;
 using Gym.BLL.Services;
+using Gym.BLL.MappingProfiles;
+using Gym.DAL;
 namespace Gym
 {
     public class Program
@@ -19,12 +21,15 @@ namespace Gym
             //builder.Services.AddScoped<IPlanRepository,PlanRepository>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddScoped<IMemberService, MemberService>();
-
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<ISessionRepository, SessionRepository>();
             builder.Services.AddDbContext<GymDbContext>(options =>
             {  
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-
+            builder.Services.AddScoped<ISessionService, SessionService>();
+            builder.Services.AddAutoMapper(m => m.AddProfile(new MappingProfile()));
+            //builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfile()));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
