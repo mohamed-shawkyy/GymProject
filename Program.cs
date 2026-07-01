@@ -7,11 +7,13 @@ using Gym.BLL.Contacts;
 using Gym.BLL.Services;
 using Gym.BLL.MappingProfiles;
 using Gym.DAL;
+using System.Threading.Tasks;
+using Gym.Extensions;
 namespace Gym
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +33,8 @@ namespace Gym
             builder.Services.AddAutoMapper(m => m.AddProfile(new MappingProfile()));
             //builder.Services.AddAutoMapper(m=>m.AddProfile(new MappingProfile()));
             var app = builder.Build();
+
+            await app.IntializeDatabaseAsync(); 
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
